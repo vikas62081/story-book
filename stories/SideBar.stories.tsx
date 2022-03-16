@@ -1,12 +1,15 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import HomeIcon from '@mui/icons-material/Home';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import PeopleIcon from '@mui/icons-material/People';
-import { MemoryRouter, Route } from 'react-router-dom';
-import { linkTo } from '@storybook/addon-links';
+import ListAltRoundedIcon from '@mui/icons-material/ListAltRounded';
+import PeopleAltRoundedIcon from '@mui/icons-material/PeopleAltRounded';
+import SpeedRoundedIcon from '@mui/icons-material/SpeedRounded';
+import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import LeaderboardRoundedIcon from '@mui/icons-material/LeaderboardRounded';
+import BookmarkRoundedIcon from '@mui/icons-material/BookmarkRounded';
+import FolderRoundedIcon from '@mui/icons-material/FolderRounded';
+import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import { SideBar, SideBarProps } from '../src';
+import { Link } from 'react-router-dom';
 
 const meta: Meta = {
   title: 'Navigation/SideBar',
@@ -31,82 +34,53 @@ const meta: Meta = {
 
 export default meta;
 
-// const AutoLinkTo = ({ kind, story }) => {
-//   React.useEffect(() => {
-//     linkTo(kind, story);
-//   });
-//   return null;
-// };
-
-// const withMemoryRouter = (StoryComponent, { parameters }) => {
-//   const { currentURL } = parameters;
-//   if (!currentURL) {
-//     return <StoryComponent />;
-//   }
-//   const { path, route, redirectComponent, redirectStory } = currentURL;
-//   if (!redirectComponent && !redirectStory) {
-//     return (
-//       <MemoryRouter initialEntries={[encodeURI(route)]}>
-//         <Route path={path}>
-//           <StoryComponent />
-//         </Route>
-//       </MemoryRouter>
-//     );
-//   }
-//   return (
-//     <MemoryRouter initialEntries={[encodeURI(route)]}>
-//       <Route path={path}>
-//         <AutoLinkTo kind={redirectComponent} story={redirectStory} />
-//       </Route>
-//     </MemoryRouter>
-//   );
-// };
-const Template: Story<SideBarProps> = (args) => <SideBar {...args} />;
+const Template: Story<SideBarProps> = (args) => <SideBar {...args} >
+  <Link to="/home">Home</Link>
+</SideBar>;
 
 export const Default = Template.bind({});
-// export const Disabled = Template.bind({});
-// export const Secondary = Template.bind({});
+
 Default.args = {
   checked: true,
   SideBarItems: [
     {
       title: 'Home',
-      icon: <HomeIcon color="primary" />,
+      icon: <ListAltRoundedIcon />,
       to: '/',
     },
     {
       title: 'Compliance Review',
-      icon: <VisibilityIcon color="primary" />,
+      icon: <PeopleAltRoundedIcon />,
       to: '/compliance-review',
     },
     {
       title: 'Divisions ',
-      icon: <DashboardIcon color="primary" />,
+      icon: <SpeedRoundedIcon />,
       to: '/divisions',
     },
     {
       title: 'Clients',
-      icon: <PeopleIcon color="primary" />,
+      icon: <ViewQuiltRoundedIcon />,
       to: '/clients',
     },
     {
       title: 'Home',
-      icon: <HomeIcon color="primary" />,
+      icon: <LeaderboardRoundedIcon />,
       to: '/',
     },
     {
       title: 'Compliance Review',
-      icon: <VisibilityIcon color="primary" />,
+      icon: <BookmarkRoundedIcon />,
       to: '/compliance-review',
     },
     {
       title: 'Divisions ',
-      icon: <DashboardIcon color="primary" />,
+      icon: <FolderRoundedIcon />,
       to: '/divisions',
     },
     {
       title: 'Clients',
-      icon: <PeopleIcon color="primary" />,
+      icon: <HelpRoundedIcon />,
       to: '/clients',
     },
   ],

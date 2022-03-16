@@ -15,15 +15,14 @@ export const useStyles = makeStyles(() =>
       marginRight: '-20px',
       position: 'fixed',
       background: '#FFFFFF',
-      '&:hover': {
-        background: 'rgba(63, 186, 141, 0.3)',
-      },
+      border: "1px #f2f2f2 solid",
+      borderRadius: 5,
+
     },
-    iconBackground: {
-      background: '#FFFFFF',
-      '&:hover': {
-        background: 'rgba(63, 186, 141, 0.3)',
-      },
+    footerContainer: {
+      textAlign: 'center',
+      position: 'absolute',
+      bottom: 0,
     },
   })
 );
