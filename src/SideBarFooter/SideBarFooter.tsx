@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import { Link } from '@mui/material';
+import { Grid, Link } from '@mui/material';
 import { MycoiLogo } from '../IconCompoenent/MycoiLogo';
 import { SvgIcon } from '@mui/material';
 import ListItemText from '@mui/material/ListItemText';
@@ -12,17 +12,21 @@ export const SideBarFooter = (props: any) => {
   return (
     <div>
       <ListItem button className={classes.iconBackground}>
-        <ListItemIcon>
+        <ListItemIcon className={classes.footerLogo}>
           <SvgIcon component={MycoiLogo} />
         </ListItemIcon>
         <ListItemText secondary="Powered by myCOI" />
       </ListItem>
-
       <div className={props.open ? classes.footerDetails : classes.hide}>
-        <Link>Privacy Policy</Link>
-        <Link> Terms & conditions</Link>
+        <Grid container>
+          <Grid item sm={6}>
+            <Link>Privacy Policy</Link>
+          </Grid> 
+          <Grid item sm={6}>
+            <Link> Terms & conditions</Link>
+          </Grid>
+        </Grid>
       </div>
-
     </div>
   );
 };

@@ -1,10 +1,24 @@
 import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
+  components: {
+    // Name of the component
+    MuiListItemIcon: { styleOverrides: { root: { color: "#0C2744" } } },
+    MuiListItem: {
+      styleOverrides: {
+        root: {// background: "red",
+          color: "#0C2744",
+          '&:hover': {
+            background: "#E2E5E9"
+          },
+        },
+      },
+    },
+  },
   palette: {
     primary: {
-      light: '#a9e5cf',
-      main: '#35b183',
+      light: '#C5EADD',
+      main: '#35b183', //#C5EADD
       dark: '#58ffac',
       contrastText: '#fff',
     },

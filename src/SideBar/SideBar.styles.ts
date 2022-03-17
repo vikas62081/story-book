@@ -1,28 +1,26 @@
-import { makeStyles, createStyles } from '@mui/styles';
+import { makeStyles } from '@mui/styles';
+import { theme } from '../theme';
 
-export const useStyles = makeStyles(() =>
-  createStyles({
-    toolbar: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'flex-end',
-
-      // padding: theme.spacing(0, 1),
-      // // necessary for content to be below app bar
-      // ...theme.mixins.toolbar,
-    },
-    arrowstyle: {
-      marginRight: '-20px',
-      position: 'fixed',
-      background: '#FFFFFF',
-      border: "1px #f2f2f2 solid",
-      borderRadius: 5,
-
-    },
-    footerContainer: {
-      textAlign: 'center',
-      position: 'absolute',
-      bottom: 0,
-    },
-  })
+export const useStyles = makeStyles(({
+  sidebarActionContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  footerContainer: {
+    position: "absolute",
+    bottom: 0
+  },
+  sidebarActionIcon: {
+    background: "#ffffff",
+    border: "1px solid",
+    borderColor: theme.palette.secondary.main,
+    borderRadius: 5,
+    position: 'fixed',
+    marginRight: -20,
+    '&:hover': {
+      background: "#ffffff",
+    }
+  }
+})
 );

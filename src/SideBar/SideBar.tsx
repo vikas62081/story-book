@@ -8,6 +8,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRightRounded';
 import { SideBarItem } from '../SideBarItems/SideBarItems';
 import { useStyles } from './SideBar.styles';
 import { SideBarFooter } from '../SideBarFooter/SideBarFooter';
+import { Grid } from '@mui/material';
 
 export type ItemProps = {
   title: string;
@@ -31,23 +32,27 @@ export const SideBar = ({ checked, SideBarItems }: SideBarProps) => {
     <Box sx={{ display: 'flex' }} data-testid="nextGen-sideBar">
       <Drawer variant="permanent" open={open}>
         <SideBarItem SideBarItems={SideBarItems} />
-        <span className={classes.toolbar}>
-          <IconButton
-            className={classes.arrowstyle}
-            onClick={handleDrawerClose}
-            data-testid="handle-click"
-          >
-            {open ? (
-              <ChevronRightIcon color="primary" />
-            ) : (
-              <ChevronLeftIcon color="primary" />
-            )}
-          </IconButton>
-        </span>
-        <div className={classes.footerContainer}>
-          <Divider />
-          <SideBarFooter open={open} />
-        </div>
+        <Grid container className={classes.footerContainer} rowSpacing={4}>
+          <Grid item sm={12} className={classes.sidebarActionContainer}>
+            <IconButton
+              className={classes.sidebarActionIcon}
+              onClick={handleDrawerClose}
+              data-testid="handle-click"
+            >
+              {open ? (
+                <ChevronRightIcon color="primary" />
+              ) : (
+                <ChevronLeftIcon color="primary" />
+              )}
+            </IconButton>
+
+          </Grid>
+          <Grid item sm={12}>
+            <Divider />
+            <SideBarFooter open={open} />
+          </Grid>
+        </Grid>
+
       </Drawer>
     </Box>
   );
