@@ -14,7 +14,7 @@ export const useStyles = makeStyles(({
   sidebarActionIcon: {
     background: "#ffffff",
     border: "1px solid",
-    borderColor: theme.palette.secondary.main,
+    borderColor: "#f2f2f2",
     borderRadius: 8,
     position: 'fixed',
     marginRight: -20,
