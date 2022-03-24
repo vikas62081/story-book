@@ -19,12 +19,7 @@ const meta: Meta = {
         options: ['small', 'medium', 'large'],
       },
     },
-    labelPlacement: {
-      control: {
-        type: 'select',
-        options: ['start', 'end', 'top'],
-      },
-    },
+
     disabled: {
       control: {
         type: 'boolean',
