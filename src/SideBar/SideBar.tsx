@@ -40,19 +40,17 @@ export const SideBar = ({ checked, SideBarItems }: SideBarProps) => {
               data-testid="handle-click"
             >
               {open ? (
-                <ChevronRightIcon color="primary" />
+                <ChevronLeftIcon color="secondary" />
               ) : (
-                <ChevronLeftIcon color="primary" />
+                <ChevronRightIcon color="secondary" />
               )}
             </IconButton>
-
           </Grid>
           <Grid item sm={12}>
             <Divider />
             <SideBarFooter open={open} />
           </Grid>
         </Grid>
-
       </Drawer>
     </Box>
   );

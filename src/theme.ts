@@ -28,5 +28,9 @@ export const theme = createTheme({
       dark: '#08a3ff',
       contrastText: '#fff',
     },
+    // error: {
+    //   main:"#005065",
+    //   light:"#aaaaaa"
+    // }
   },
 });

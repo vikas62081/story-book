@@ -15,7 +15,7 @@ export const useStyles = makeStyles(({
     background: "#ffffff",
     border: "1px solid",
     borderColor: theme.palette.secondary.main,
-    borderRadius: 5,
+    borderRadius: 8,
     position: 'fixed',
     marginRight: -20,
     '&:hover': {

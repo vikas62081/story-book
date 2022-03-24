@@ -1,22 +1,22 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { ContainedButton, ButtonProps } from '../src';
+import { CombinedRadio, RadioProps } from '../src';
 
 const meta: Meta = {
-  title: 'Inputs/Button',
-  component: ContainedButton,
+  title: 'Inputs/Radio',
+  component: CombinedRadio,
   argTypes: {
     onClick: { action: 'clicked' },
-    variant: {
-      control: {
-        type: 'select',
-        options: ['text', 'contained', 'outlined'],
-      },
-    },
     color: {
       control: {
         type: 'select',
         options: ['primary', 'secondary'],
+      },
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
       },
     },
     disabled: {
@@ -32,23 +32,20 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<ButtonProps> = (args) => <ContainedButton {...args} />;
+const Template: Story<RadioProps> = (args) => <CombinedRadio {...args} />;
 
 export const Default = Template.bind({});
 export const Disabled = Template.bind({});
 export const Secondary = Template.bind({});
 Default.args = {
-  children: 'Click Me',
-  variant: 'outline',
+  label: 'Click Me',
   color: 'primary',
 };
 Secondary.args = {
-  children: 'Click Me',
-  variant: 'contained',
+  label: 'Click Me',
   color: 'secondary',
 };
 Disabled.args = {
-  children: 'Click Me',
-  variant: 'contained',
+  label: 'Radio',
   disabled: true,
 };

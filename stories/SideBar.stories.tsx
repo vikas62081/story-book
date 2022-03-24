@@ -12,7 +12,7 @@ import { SideBar, SideBarProps } from '../src';
 import { Link } from 'react-router-dom';
 
 const meta: Meta = {
-  title: 'Navigation/SideBar',
+  title: 'Navigations/SideBar',
   component: SideBar,
   argTypes: {
     onClick: { action: 'clicked' },
@@ -34,9 +34,11 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<SideBarProps> = (args) => <SideBar {...args} >
-  <Link to="/home">Home</Link>
-</SideBar>;
+const Template: Story<SideBarProps> = (args) => (
+  <SideBar {...args}>
+    <Link to="/home">Home</Link>
+  </SideBar>
+);
 
 export const Default = Template.bind({});
 

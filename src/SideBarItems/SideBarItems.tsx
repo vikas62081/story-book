@@ -10,18 +10,20 @@ import { ItemProps } from '../SideBar/SideBar';
 
 export const SideBarItem = (props: any) => {
   const classes = useStyles();
-  const [active, setActive] = useState(-1)
+  const [active, setActive] = useState(-1);
   const handleChange = (index: number) => {
-    setActive(index)
-  }
+    setActive(index);
+  };
   return (
     <List>
       {props.SideBarItems.map((SideBarItem: ItemProps, index: number) => (
         <ListItem
           button
-          color='primary'
+          color="primary"
           key={SideBarItem.title}
-          className={active === index ? classes.selected : classes.iconBackground}
+          className={
+            active === index ? classes.selected : classes.iconBackground
+          }
           component={Link}
           onClick={() => handleChange(index)}
           to={SideBarItem.to}

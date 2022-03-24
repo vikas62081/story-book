@@ -1,25 +1,36 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { ContainedButton, ButtonProps } from '../src';
+import { ContainedCheckbox, CheckboxProps } from '../src';
 
 const meta: Meta = {
-  title: 'Inputs/Button',
-  component: ContainedButton,
+  title: 'Inputs/Checkbox',
+  component: ContainedCheckbox,
   argTypes: {
     onClick: { action: 'clicked' },
-    variant: {
-      control: {
-        type: 'select',
-        options: ['text', 'contained', 'outlined'],
-      },
-    },
     color: {
       control: {
         type: 'select',
         options: ['primary', 'secondary'],
       },
     },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
+      },
+    },
+    labelPlacement: {
+      control: {
+        type: 'select',
+        options: ['start', 'end', 'top'],
+      },
+    },
     disabled: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    defaultChecked: {
       control: {
         type: 'boolean',
       },
@@ -32,23 +43,25 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<ButtonProps> = (args) => <ContainedButton {...args} />;
+const Template: Story<CheckboxProps> = (args) => (
+  <ContainedCheckbox {...args} />
+);
 
 export const Default = Template.bind({});
 export const Disabled = Template.bind({});
 export const Secondary = Template.bind({});
 Default.args = {
-  children: 'Click Me',
-  variant: 'outline',
+  label: 'Click Me',
+  variant: 'contained',
   color: 'primary',
 };
 Secondary.args = {
-  children: 'Click Me',
+  label: 'Click Me',
   variant: 'contained',
   color: 'secondary',
 };
 Disabled.args = {
-  children: 'Click Me',
-  variant: 'contained',
+  label: 'Label',
   disabled: true,
+  size: 'small',
 };
