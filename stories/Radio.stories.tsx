@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { CombinedRadio, RadioProps } from '../src';
 
 const meta: Meta = {
-  title: 'Inputs/Radio',
+  title: 'Components/Radio',
   component: CombinedRadio,
   argTypes: {
     onClick: { action: 'clicked' },

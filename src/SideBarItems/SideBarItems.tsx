@@ -15,8 +15,8 @@ export const SideBarItem = (props: any) => {
     setActive(index);
   };
   return (
-    <List>
-      {props.SideBarItems.map((SideBarItem: ItemProps, index: number) => (
+    <List data-testid="To-be-Active">
+      {props?.SideBarItems?.map((SideBarItem: ItemProps, index: number) => (
         <ListItem
           button
           color="primary"
@@ -27,6 +27,7 @@ export const SideBarItem = (props: any) => {
           component={Link}
           onClick={() => handleChange(index)}
           to={SideBarItem.to}
+          data-testid="test"
         >
           <Tooltip title={SideBarItem.title}>
             <ListItemIcon color="primary">{SideBarItem.icon}</ListItemIcon>

@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { AlertProps, CombinedAlert } from '../src';
 
 const meta: Meta = {
-  title: 'Notifications/Alert',
+  title: 'Components/Alert',
   component: CombinedAlert,
 
   argTypes: {
@@ -42,8 +42,10 @@ Default.args = {
   description:
     'Notification message: Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type',
   severity: 'error',
+  onClose: () => {},
 };
 Disabled.args = {
   title: 'Notification title',
   severity: 'success',
+  onClose: () => {},
 };

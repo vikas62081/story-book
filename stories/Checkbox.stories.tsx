@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { ContainedCheckbox, CheckboxProps } from '../src';
 
 const meta: Meta = {
-  title: 'Inputs/Checkbox',
+  title: 'Components/Checkbox',
   component: ContainedCheckbox,
   argTypes: {
     onClick: { action: 'clicked' },

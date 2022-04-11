@@ -40,9 +40,9 @@ export const SideBar = ({ checked, SideBarItems }: SideBarProps) => {
               data-testid="handle-click"
             >
               {open ? (
-                <ChevronLeftIcon color="secondary" />
-              ) : (
                 <ChevronRightIcon color="secondary" />
+              ) : (
+                <ChevronLeftIcon color="secondary" />
               )}
             </IconButton>
           </Grid>

@@ -9,10 +9,9 @@ import BookmarkRoundedIcon from '@mui/icons-material/BookmarkRounded';
 import FolderRoundedIcon from '@mui/icons-material/FolderRounded';
 import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import { SideBar, SideBarProps } from '../src';
-import { Link } from 'react-router-dom';
 
 const meta: Meta = {
-  title: 'Navigations/SideBar',
+  title: 'Components/SideBar',
   component: SideBar,
   argTypes: {
     onClick: { action: 'clicked' },
@@ -29,16 +28,16 @@ const meta: Meta = {
   },
   parameters: {
     controls: { expanded: true },
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/hwMJlFL4e49ojm5qOKZRgy/myCoi-Navigation?node-id=0%3A1',
+    },
   },
 };
 
 export default meta;
 
-const Template: Story<SideBarProps> = (args) => (
-  <SideBar {...args}>
-    <Link to="/home">Home</Link>
-  </SideBar>
-);
+const Template: Story<SideBarProps> = (args) => <SideBar {...args} />;
 
 export const Default = Template.bind({});
 

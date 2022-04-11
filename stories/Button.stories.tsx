@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { ContainedButton, ButtonProps } from '../src';
 
 const meta: Meta = {
-  title: 'Inputs/Button',
+  title: 'Components/Button',
   component: ContainedButton,
   argTypes: {
     onClick: { action: 'clicked' },
@@ -39,7 +39,7 @@ export const Disabled = Template.bind({});
 export const Secondary = Template.bind({});
 Default.args = {
   children: 'Click Me',
-  variant: 'outline',
+  variant: 'contained',
   color: 'primary',
 };
 Secondary.args = {
