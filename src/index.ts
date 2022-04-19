@@ -6,3 +6,4 @@ export * from './Alert/Alert';
 export * from './Checkbox/Checkbox';
 export * from './Radio/Radio';
 export * from './DatePicker/DatePicker'
+export * from './DateRangePicker/DateRangePicker'

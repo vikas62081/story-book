@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import {  butter, firefly, flamingo, mint,  } from './colors';
 
 export const theme = createTheme({
   components: {
@@ -28,5 +29,17 @@ export const theme = createTheme({
       dark: '#08a3ff',
       contrastText: '#fff',
     },
+    success: {
+      main: mint[500],
+    },
+    error: {
+      main:flamingo[500]
+    },
+    info: {
+      main: firefly[500]
+    },
+    warning: {
+      main:butter[500]
+    }
   },
 });

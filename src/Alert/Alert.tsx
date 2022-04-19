@@ -2,9 +2,10 @@ import React from 'react';
 import { AlertTitle, Alert } from '@mui/material';
 //import { Link } from 'react-router-dom';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import InfoIcon from '@mui/icons-material/Info';
 import ErrorIcon from '@mui/icons-material/Error';
-import WarningIcon from '@mui/icons-material/Warning';
+import SmsFailedIcon from '@mui/icons-material/SmsFailed';
+import ReportIcon from '@mui/icons-material/Report';
+// import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 export interface AlertProps {
   title: string;
   description?: string;
@@ -16,9 +17,9 @@ const getCustomIcons = (
 ) => {
   return {
     success: <CheckCircleIcon fontSize={iconSize} />,
-    error: <ErrorIcon fontSize={iconSize} />,
-    warning: <WarningIcon fontSize={iconSize} />,
-    info: <InfoIcon fontSize={iconSize} />,
+    error: <ReportIcon fontSize={iconSize} />,
+    warning: <SmsFailedIcon fontSize={iconSize} />,
+    info: <ErrorIcon fontSize={iconSize} />,
   };
 };
 
