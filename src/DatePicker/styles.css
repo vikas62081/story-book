@@ -1,0 +1,31 @@
+rs-calendar-table-cell{
+    color:#0A233E !important   
+}
+.rs-calendar-table-cell-content:hover{
+    background-color: #E2E5E9 !important;
+    color:#0A233E !important  
+}
+.rs-btn-icon.rs-btn-xs {
+    color:#0A233E !important
+}
+.rs-calendar-header-title {
+    color:#0A233E !important
+}
+.rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
+    background-color: #0A233E  !important   
+}
+.rs-calendar-table-cell-selected  :hover{
+    background-color: #E2E5E9 !important;
+    color:#0A233E !important  
+}
+.rs-calendar-table-cell-is-today .rs-calendar-table-cell-content {
+    box-shadow: inset 0 0 0 1px #0A233E  !important;
+}
+.rs-btn-primary{
+    background-color: #0A233E  !important  
+}
+.rs-picker-default .rs-picker-toggle {
+    border: 1px solid #E2E5E9 !important;
+    color: #E2E5E9 !important;
+    box-shadow: inset 0 0 0 1px #0A233E  !important;
+}
