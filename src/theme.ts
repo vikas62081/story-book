@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import {  butter, firefly, flamingo, mint,  } from './colors';
+import {  butter, firefly, flamingo, mint, sherpa,  } from './colors';
 
 export const theme = createTheme({
   components: {
@@ -8,9 +8,9 @@ export const theme = createTheme({
     MuiListItem: {
       styleOverrides: {
         root: {// background: "red",
-          color: "#0C2744",
+          color: firefly[500],
           '&:hover': {
-            background: "#E2E5E9"
+            background: firefly[50], color: firefly[500],
           },
         },
       },
@@ -18,16 +18,13 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
-      light: '#C5EADD',
-      main: '#35b183', //#C5EADD
-      dark: '#58ffac',
-      contrastText: '#fff',
+      // light: '#C5EADD',
+      main: mint[500], //#C5EADD
+      // dark: '#58ffac',
+      // contrastText: '#fff',
     },
     secondary: {
-      light: '#66e0ff',
-      main: '#005065',
-      dark: '#08a3ff',
-      contrastText: '#fff',
+      main: sherpa[500],
     },
     success: {
       main: mint[500],
@@ -41,5 +38,18 @@ export const theme = createTheme({
     warning: {
       main:butter[500]
     }
-  },
+  }, typography: {
+    fontFamily: [ 'SF Pro Text',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+  }
 });

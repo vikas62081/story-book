@@ -18,9 +18,9 @@ export const useStyles = makeStyles(({
     },
   },
   selected: {
-    background: theme.palette.primary.light,
+    background: theme.palette.primary.main,
     '&:hover': {
-      background: theme.palette.primary.light,
+      background: theme.palette.primary.main,
     },
   },
   footerLogo: {
