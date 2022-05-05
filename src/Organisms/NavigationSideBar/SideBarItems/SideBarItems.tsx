@@ -5,7 +5,7 @@ import List from '@mui/material/List';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import { Link } from 'react-router-dom';
 import ListItemText from '@mui/material/ListItemText';
-import { useStyles } from '../global.styles';
+import { useStyles } from '../../../global.styles';
 import { ItemProps } from '../SideBar/SideBar';
 
 export const SideBarItem = (props: any) => {
@@ -27,7 +27,6 @@ export const SideBarItem = (props: any) => {
           component={Link}
           onClick={() => handleChange(index)}
           to={SideBarItem.to}
-          data-testid="test"
         >
           <Tooltip title={SideBarItem.title}>
             <ListItemIcon color="primary">{SideBarItem.icon}</ListItemIcon>

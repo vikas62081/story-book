@@ -1,16 +1,26 @@
 import { createTheme } from '@mui/material/styles';
-import {  butter, firefly, flamingo, mint, sherpa,  } from './colors';
-
+import {COLORS} from './colors'
 export const theme = createTheme({
   components: {
-    // Name of the component
-    MuiListItemIcon: { styleOverrides: { root: { color: "#0C2744" } } },
+  //   MuiButton: {
+  //     styleOverrides: {
+  //       root: {
+  //         '&:focus': {
+  //           outlineStyle: 'solid',
+  //           outlineColor: sherpa['A700'],
+  //           outlineWidth: 'thin',
+  //         },
+  //       },
+  //     },
+  //   },
+    MuiListItemIcon: { styleOverrides: { root: { color: '#0C2744' } } },
     MuiListItem: {
       styleOverrides: {
-        root: {// background: "red",
-          color: firefly[500],
+        root: {
+          color: COLORS.FIREFLY[500],
           '&:hover': {
-            background: firefly[50], color: firefly[500],
+            background: COLORS.FIREFLY[50],
+            color: COLORS.FIREFLY[500],
           },
         },
       },
@@ -18,28 +28,27 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
-      // light: '#C5EADD',
-      main: mint[500], //#C5EADD
-      // dark: '#58ffac',
-      // contrastText: '#fff',
+      main: COLORS.FIREFLY[500],
     },
     secondary: {
-      main: sherpa[500],
+      main: COLORS.SLATE[200],
     },
     success: {
-      main: mint[500],
+      main: COLORS.MINT[200],
     },
     error: {
-      main:flamingo[500]
+      main: COLORS.FIREFLY[200],
     },
     info: {
-      main: firefly[500]
+      main: COLORS.FIREFLY[500],
     },
     warning: {
-      main:butter[500]
-    }
-  }, typography: {
-    fontFamily: [ 'SF Pro Text',
+      main: COLORS.BUTTER[500],
+    },
+  },
+  typography: {
+    fontFamily: [
+      'SF Pro Text',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
@@ -51,5 +60,5 @@ export const theme = createTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
-  }
+  },
 });

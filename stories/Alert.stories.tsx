@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { AlertProps, CombinedAlert } from '../src';
 
 const meta: Meta = {
-  title: 'Components/Alert',
+  title: 'Components/Molecules/Alert',
   component: CombinedAlert,
 
   argTypes: {
@@ -27,6 +27,10 @@ const meta: Meta = {
   },
   parameters: {
     controls: { expanded: true },
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/wDnN6FrtMTtJ6W0IworORn/myCOI-Design-System?node-id=580%3A16682',
+    },
   },
 };
 
@@ -36,7 +40,7 @@ const Template: Story<AlertProps> = (args) => <CombinedAlert {...args} />;
 
 export const Default = Template.bind({});
 export const Disabled = Template.bind({});
-// export const Secondary = Template.bind({});
+
 Default.args = {
   title: 'Notification title',
   description:

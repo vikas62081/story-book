@@ -11,7 +11,7 @@ import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import { SideBar, SideBarProps } from '../src';
 
 const meta: Meta = {
-  title: 'Components/SideBar',
+  title: 'Components/Organisms/SideBar',
   component: SideBar,
   argTypes: {
     onClick: { action: 'clicked' },

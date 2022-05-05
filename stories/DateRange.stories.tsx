@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { BasicDatePicker } from '../src';
+import { BasicDatePickerRange } from '../src';
 
 const meta: Meta = {
-  title: 'Components/Molecules/Date Picker',
-  component: BasicDatePicker,
+  title: 'Components/Molecules/Date Range',
+  component: BasicDatePickerRange,
   argTypes: {},
   parameters: {
     controls: { expanded: true },
@@ -13,11 +13,10 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<any> = (args) => <BasicDatePicker {...args} />;
+const Template: Story<any> = (args) => <BasicDatePickerRange {...args} />;
 
 export const Default = Template.bind({});
 
 Default.args = {
   placeholder: 'Select Date',
-  oneTap: true,
 };
